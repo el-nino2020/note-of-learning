@@ -1,8 +1,16 @@
 [最后一页](#EOF，文件末尾)（按住`Ctrl`并点击）
 
+
+
+# Version 1.0时间： 2022年4月12日
+
+- 课程全部学完
+
+# Version 1.1 时间：
+
 # 序言
 
-- 所用教程：[【零基础 快速学Java】韩顺平 零基础30天学会Java](https://www.bilibili.com/video/BV1fh411y7R8?spm_id_from=333.999.0.0)
+- 所用教程：[【零基础 快速学Java】韩顺平 零基础30天学会Java](https://www.bilibili.com/video/BV1fh411y7R8)
 - 这是我在会用C/C++编程后（工程方面只了解了泛型编程，但没用代码实现过。主要还是用STL做算法题）、在学校上完算法与数据结构这门课后，学习java的笔记。故重复的或是基本的章节和内容将省略。
 - 同时，笔记记录的表达方法是完全主观的，主要是方便我自己看。即使表达不优美、不地道（因为我已经很久不看文学书了，看得都是些翻译的专业书——计算机、经济学、西方哲学等），笔记的所有语句在**逻辑上**肯定是无误的
 - 中英混用对我来说基本**没区别**，一些专业术语肯定要用英文来写 ，或者用英文额外标注。
@@ -70,7 +78,6 @@ public class Hello{
 | `\n`           | 换行符                     |
 | `\\或 \"或 \'` | 输出`\ 或 " 或 '`          |
 | `\r`           | 回车符，将光标退回初始位置 |
-|                |                            |
 
 ## 注释
 
@@ -179,13 +186,13 @@ public class Hello{
 
 	- 低精度数据类型转换为高精度，称为自动类型转换
 	- 转换规则：
-		1. char $\rightarrow$ int $\rightarrow$ long $\rightarrow$ float $\rightarrow$  double
-		2. byte $\rightarrow$ short $\rightarrow$ int $\rightarrow$ long $\rightarrow$ float $\rightarrow$  double
-	- 不同数据类型进行运算时，将低精度转换为当前式子中最高的精度（不一定是double）
+		1. `char` $\rightarrow$ `int` $\rightarrow$` long` $\rightarrow$ `float` $\rightarrow$  `double`
+		2. `byte` $\rightarrow$ `short` $\rightarrow$` int` $\rightarrow$ `long` $\rightarrow$ `float` $\rightarrow$  `double`
+	- 不同数据类型进行运算时，将低精度转换为当前式子中最高的精度（不一定是`double`）
 	- 将高精度值赋给低精度变量，编译会报错（C++只会warning)
-	- byte或short不会和char自动转换
-	- byte、short、char参与运算时会转换为int
-	- boolean不参与类型转换
+	- `byte`或`short`不会和`char`自动转换
+	- `byte`、`short`、`char`参与运算时会转换为`int`
+	- `boolean`不参与类型转换
 
 	
 
@@ -198,9 +205,9 @@ public class Hello{
 
 3. 基本数据类型和String类型的互相转换
 
-	1. 基本数据类型 $\rightarrow$ String
+	1. 基本数据类型 $\rightarrow$ `String`
 
-		语法：基本数据类型+“”
+		语法：`基本数据类型 + ""`
 
 		举例：
 
@@ -209,9 +216,9 @@ public class Hello{
 		String s = x + "";
 		```
 
-	2. String $\rightarrow$ 基本数据类型
+	2. `String` $\rightarrow$ 基本数据类型
 
-	  语法：除char外，通过基本数据类型的包装类调用parseXX方法；转换为char则调用String类的charAt方法
+	  语法：除`char`外，通过基本数据类型的包装类调用`parseXX`方法；转换为`char`则调用`String`类的`charAt`方法
 
 	  举例：
 
@@ -237,13 +244,13 @@ public class Hello{
 
 ## 关系运算符
 
-- 关系运算符返回boolean值
+- 关系运算符返回`boolean`值
 
 - 和C++一样：等于`==` 、不等于`!=`、小于`<=`、大于`>=`、小于等于`<=`、大于等于`>=`
 
 - 新的运算符`instanceof` ：检查是否为类的对象
 
-	举例：`“hello” instanceof String` 返回`true`
+	举例：`"hello" instanceof String` 返回`true`
 
 
 
@@ -313,8 +320,8 @@ public class Hello{
 
 - 标识符指变量、类或方法的命名
 - 命名规则
-	- 由英文字母大小写、阿拉伯数字、_或$组成
-	- 只有数字不可以作为标识符开头
+	- 由英文字母大小写、阿拉伯数字、**_或$**组成
+	- **只有数字不可以**作为标识符开头
 	- 不能使用关键字和保留字
 - 命名规范
 	- 包名：多单词组成时，所有字母小写：`aaa.ccc`
@@ -334,18 +341,18 @@ import java.util.Scanner;//导入所需要的包java.util
 class test{
 	public static void main(String[] args){
 
-		Scanner input=new Scanner(System.in);//input为Scanner类的对象，同时调用Scanner()的一个构造器
+		Scanner input = new Scanner(System.in);//input为Scanner类的对象，同时调用Scanner()的一个构造器
 
 		System.out.println("What's your name?");
-		String name=input.next();
+		String name = input.next();
 
 		System.out.println("What's your age?");
-		int age=input.nextInt();
+		int age = input.nextInt();
 
 		System.out.println("What's your salary?");
-		double salary=input.nextDouble();
+		double salary = input.nextDouble();
 
-		System.out.println("Name\tAge\tSalary\n"+name+"\t"+age+"\t"+salary);
+		System.out.println("Name\tAge\tSalary\n" + name + "\t" + age + "\t" + salary);
 
 	}
 
@@ -401,9 +408,9 @@ class test{
 
 		举例：$0b11010101=0b\,011|010|101=0325$
 
-	2. bin $\rightarrow$ hex，从低位开始，每**四**位一组转成对应的**十六**进制，高位不足**四位**位补零
+	2. bin $\rightarrow$ hex，从低位开始，每**四**位一组转成对应的**十六**进制，高位不足**四位**补零
 
-		举例：$0b11010101=0b\,1101|0101=0xD5 $
+		举例：$0b11010101=0b\,1101|0101=\text{0xD5} $
 
 
 
@@ -419,7 +426,7 @@ class test{
 
 
 
-## 位运算，原码、反码、补码
+## 位运算，原码、反码、补码——2's complement
 
 1. 原码、反码、补码的规则
 	- 二进制最高位是符号位：0表示正数，1表示负数
@@ -427,7 +434,7 @@ class test{
 	- 负数的反码 = 原码符号位不变，其他位按位取反
 	- 负数的补码 = 负数的反码 + 1
 	- java没有无符号数
-	- 计算机**进行运算时，以补码形式进行运算**
+	- 计算机中，**以补码形式进行存储和运算**，即2's complement法则
 	- 计算机展示运算结果是用原码
 
 
@@ -454,6 +461,11 @@ class test{
 	​     逻辑右移（无符号右移）`>>>`：低位溢出，高位补0
 
 	- **注意**，负数的补码和原码不一致，运算时不要忘记转换
+
+
+
+3. 注记（Ver 1.1）
+	- 上了计算机体系结构的课后，这一节的知识应该是常识
 
 
 
@@ -779,9 +791,9 @@ class Test(){
 
 ## 方法重载（overload）
 
-- 重载：有多个相同的方法名，但每个方法的参数列表不同
-- 参数列表不同：形参类型、顺序或数量不同
-- 方法返回类型无要求
+- 重载：有多个**相同的方法名**，但每个方法的参数列表不同
+- 参数列表不同：**形参类型、顺序或数量不同**
+- 方法**返回类型无要求**
 
 
 
@@ -834,7 +846,7 @@ class Test(){
 
 - 局部变量：一般指方法中定义的变量，其作用域为该方法
 
-- 局部变量必须在赋值后才能使用；而属性不用（因为会被自动初始化为广义零）
+- **局部变量必须在赋值后才能使用**；而属性不用（因为会被自动初始化为广义零）
 
 	```java
 	int num;
@@ -903,7 +915,7 @@ class Test(){
 	分析：`Cat c1 = new Cat("李东风",2);`
 
 	1. 默认初始化：属性赋默认值，`name`为`null`，`age`为`0`
-	2. 显示初始化：`age`为`1`
+	2. 显式初始化：`age`为`1`
 	3. 构造器初始化：`name`为`李东风`，`age`为`2`
 
 
@@ -1051,7 +1063,7 @@ class A {
 
 
 
-7. 查看源代码：光标放在方法名上，按`Ctrl + B` ，或右键：`Go To` - ‘Declaraction or Usages’
+7. 查看源代码：光标放在方法名上，按`Ctrl + B` ，或右键：`Go To` - `Declaraction or Usages`
 	- 如果没有成功，则需要事先配置源文件，方法如下：
 	- 在`File` - `Project Structure` - `SDKs` - ‘Sourcepath’中添加jdk安装目录下的`src.zip`和`javafx-src.zip`文件
 8. 调试——debug
@@ -1083,7 +1095,7 @@ class A {
 
 
 
-3. 包的本质：包含类文件的文件夹
+3. 包的本质：包含类文件的**文件夹**
 
 
 
@@ -1149,7 +1161,8 @@ class A {
 
 5. 包的命名
 	- 命名规则：只能包含数字、字母、下划线、句点，不能以数字开头，不能使用关键字和保留字
-	- 命名规范：使用小写字母和小圆点：`com.公司名.项目名.业务模块名`；e.g. `com.sina.crm.user`
+	- 命名规范：使用小写字母和小圆点：`com.公司名.项目名.业务模块名`；
+	- e.g. `com.sina.crm.user`
 
 
 
@@ -1194,7 +1207,7 @@ class A {
 
 ## 封装（encapsulation）
 
-1. OOP三大特征：封装、继承和多态
+1. OOP三大特征：**封装、继承和多态**
 
 
 
@@ -1358,7 +1371,7 @@ class A {
 
 	1. 子类继承所有的属性和方法，但不能直接访问父类的私有（`private`）属性和方法
 
-	2. 子类必须调用父类构造器，已完成父类初始化
+	2. 子类**必须调用父类构造器**，以完成父类初始化
 
 	3. 创建子类时，无论使用子类的哪一个构造器，都会默认调用父类的默认构造器；如果父类没有默认构造器，则应该用`super(参数列表)`来指定父类的相应构造器
 
@@ -1415,13 +1428,13 @@ class A {
 
 	5. `super()`必须放在，且只能放在构造器的第一句——因为需要先初始化父类、再初始化子类
 
-	6. `super()`和`this()`在一个构造器中只能出现一次——因为子类的任何一个构造器都包含`super()`。如果同时使用`super()`和`this()`，会初始化父类两次
+	6. `super()`和`this()`在一个构造器中只能出现一次——因为子类的任何一个构造器都包含`super()`。如果同时使用`super()`和`this()`，会初始化父类两次——这是不可能的
 
 	7. java中，`Object`类是所有类的基类
 
 	8. 父类构造器的调用不限于直接父类，将一直上述至`Object`类——顶级父类
 
-	9. java是单继承机制，即子类最多继承一个直接父类
+	9. java是**单继承机制**，即子类最多继承一个直接父类
 
 	10. 不能滥用继承，子类和父类之间需要满足is-a的关系
 
@@ -1429,7 +1442,7 @@ class A {
 
 
 
-6. 继承的本质（内存分析），以及查找关系的原则
+6. 继承的本质（内存分析），以及**查找关系**的原则
 
 	- 使用以下类：
 
@@ -1462,8 +1475,8 @@ class A {
 
 		<img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202202050641086.png" alt="屏幕截图(233)" style="zoom: 50%;" />
 
-		1. 由`Son`类的继承关系向上追溯至`Object`类，以自顶向下的顺序在方法区中加载类信息，即先`Object`，再`GrandPa`，再`Father`，最后`Son`。类信息包括成员信息和方法信息
-		2. 在堆中分配空间，如图为0x11。首先为`Grandpa`类分配`name` 和`hobby`的空间（由于两者都是`String`——引用类型——故在常量池建立相应数据，即0x22和0x33）。再为`Father`类分配对应的`name`和`age`的空间。最后，给`Son`类分配它的`name`空间。在`main`中建立类变量`son`，将0x11赋值给它
+		1. 由`Son`类的继承关系向上追溯至`Object`类，以自顶向下的顺序在方法区中加载类信息，即先`Object`，再`GrandPa`，再`Father`，最后`Son`。类信息包括属性信息和方法信息
+		2. 在堆中分配空间，如图为0x11。首先为`Grandpa`类分配`name` 和`hobby`的空间（由于两者都是`String`，在常量池建立相应数据，即0x22和0x33）。再为`Father`类分配对应的`name`和`age`的空间。最后，给`Son`类分配它的`name`空间。在`main`中建立类变量`son`，将0x11赋值给它
 		3. 接着，程序欲输出`son.name`。在继承中有以下**查找关系**：
 			- 首先查找子类是否有`name`
 			- 如果子类有该属性，且可以访问，则返回该属性。（*）
@@ -1480,7 +1493,7 @@ class A {
 
 ## `super`关键字
 
-1. `super`代表父类的引用，以访问父类的属性、方法、构造器
+1. `super`代表父类对象的引用，以访问父类的属性、方法、构造器
 
 
 
@@ -1565,14 +1578,14 @@ class A {
 
 ## 方法重写/覆盖（override）
 
-1. 简单定义：子类的一个方法与其父类的某个方法的名称、返回类型、参数一样，则该方法覆盖其父类的方法
+1. 简单定义：子类的一个方法与其父类的某个方法的**名称、返回类型、参数一样**，则该方法覆盖其父类的方法
 
 
 
 2. 一个例子
 
 	```java
-	public class override {
+	public class Test {
 	    public static void main(String[] args) {
 	        B b = new B();
 	        b.f1();
@@ -1596,16 +1609,16 @@ class A {
 
 3. 重写规则：
 
-	- 子类的方法的形参和名称要与父类的完全相同
+	- 子类的方法的**形参和名称要与父类的完全相同**
 
-	- 子类方法的返回类型要与父类方法的返回类型相同，或者是父类方法返回类型的子类。例如：
+	- 子类方法的**返回类型要与父类方法的返回类型相同**，或者是父类方法返回类型的子类。例如：
 
 		|        | 父类返回类型 | 子类返回类型 |
 		| ------ | ------------ | ------------ |
 		| 情况一 | `String`     | `String`     |
 		| 情况二 | `Object`     | `String`     |
 
-	- 子类方法不能缩小父类方法的访问权限。例如，父类的某方法定义为`void f1()` 。按照访问权限`public` > `protected` > 默认 > `private` ，子类的方法若要重写，则须定义为`public void f1()`或`protected void f1()`或`void f1()`
+	- **子类方法不能缩小父类方法的访问权限**。例如，父类的某方法定义为`void f1()` 。按照访问权限`public` > `protected` > 默认 > `private` ，子类的方法若要重写，则须定义为`public void f1()`或`protected void f1()`或`void f1()`
 
 
 
@@ -1629,7 +1642,7 @@ class A {
 
 
 
-2. 方法多态：重写和重载体现多态
+2. 方法多态：**重写和重载**体现多态
 
 
 
@@ -1694,9 +1707,9 @@ class A {
 
 	- 编译类型看等号左边，运行类型看右边
 
-	- 该引用名可以调用所有访问权限允许的父类成员（属性和方法）
+	- :eight_pointed_black_star: 该引用名可以调用所有访问权限允许的父类成员（属性和方法）
 
-	- 该引用名不能调用子类的特有成员。
+	- :eight_spoked_asterisk: 该引用名**不能**调用子类的**特有**成员。
 
 	- 以上两点由编译类型决定
 
@@ -1822,7 +1835,7 @@ class A {
 
 
 
-4. `instanceof`比价操作符
+4. `instanceof`比较操作符
 
 	- 判断对象的运行类型是否为xx类型或xx的子类
 
@@ -2066,9 +2079,9 @@ class A {
 
 5. `finalize()`方法
 
-	- 当对象被回收时（*），系统会自动调用该对象的该方法。子类可以重写`finalize`方法，以释放资源（e.g. 数据库连接、文件连接等），但一般不会重写该方法
+	- 当对象被回收时（*），系统会自动调用该对象的该方法。子类可以重写`finalize`方法，以释放资源（如数据库连接、文件连接等），但一般不会重写该方法
 
-	- （*）：何时回收对象：当某对象没有引用，jvm会判定该对象为垃圾对象。在某时刻（**）使用垃圾回收器来销毁对象，销毁对象前调用该对象的`finalize`方法——由此可见，`finalize`和析构器（destructor）类似
+	- （*）：何时回收对象：当某对象没有引用，JVM会判定该对象为垃圾对象。在某时刻（**）使用垃圾回收器来销毁对象，销毁对象前调用该对象的`finalize`方法——由此可见，`finalize`和析构器（destructor）类似
 
 	- （**）：垃圾回收器的调用，由系统来决定。也可以使用`System.gc()`主动调用垃圾回收机制，但不一定立即触发该机制
 
@@ -2243,7 +2256,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- 静态变量被同一个类所有对象共享。即，在每一个对象中，静态变量实际都指向同一个地址，地址中才是静态变量的值
 		- 在JDK8以前，静态变量存放在常量池的静态域中
 		- JDK8以后，静态变量存放在堆中该类的原型类中
-	- 静态变量在类加载的时候被生成。故没有对象被创建时也能够访问静态变量
+	- 静态变量在**类加载的时候被生成**。故没有对象被创建时也能够访问静态变量
 
 
 
@@ -2302,7 +2315,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 4. 一些细节
 	- 类方法不允许使用和对象有关的关键字，如`this`和`super`
-	- 类方法只能访问静态成员
+	- **类方法只能访问静态成员**
 	- 普通方法可以访问普通成员，也可以访问静态成员
 
 
@@ -2315,7 +2328,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- JVM需要调用类的`main`方法，因此访问权限必须是`public`
 
-	- JVM在调用`mian`方法时不必创建对象，因此需要加上`static`
+	- JVM在调用`main`方法时不必创建对象，因此需要加上`static`
 
 	- `args`是执行`java`命令时传递给运行的类的`main`方法的参数
 
@@ -2436,7 +2449,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 4. 细节：
 
-	1. 静态代码块的作用，是对类进行初始化，它随着**类的加载**而执行，且只执行一次
+	1. 静态代码块的作用，是**对类进行初始化**，它随着**类的加载**而执行，且只执行一次
 	2. 类何时被加载？
 		- 创建对象实例时
 		- 创建子类对象实例时，父类也会被加载
@@ -2625,7 +2638,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 2. 什么是单例设计模式？
-	- 单例，即单个实例。该模式是指采取一定方法，保证在整个软件系统中，某个类只能存在一个对象实例，并且该类提供一个取得实例的方法
+	- 单例，即单个实例。该模式是指采取一定方法，保证在**整个软件系统中**，某个类只能存在**一个**对象实例，并且该类提供一个取得实例的方法
 	- 单例设计模式有两种方式：1）饿汉式；2）懒汉式
 	- `java.lang.Runtime`是经典的单例模式
 
@@ -2692,9 +2705,9 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 ## `final`关键字
 
 1. 使用方式：
-	- 当不希望类被继承时，可以用`final`修饰，例如`final Class Cat(){}`
-	- 当不希望父类的某个方法被子类重写时，可以用`final`修饰，例如，`public final void f1(){}`——`f1()`是父类的方法
-	- 当不希望类的某个属性被修改，可以用`final`修饰，例如：`public final double RATE = 0.04;`
+	- 当**不希望类被继承**时，可以用`final`修饰，例如`final Class Cat(){}`
+	- 当**不希望**父类的某个方法被子类**重写**时，可以用`final`修饰，例如，`public final void f1(){}`——`f1()`是父类的方法
+	- 当**不希望**类的某个属性**被修改**，可以用`final`修饰，例如：`public final double RATE = 0.04;`
 	- 当不希望某个局部变量被修改，可以用`final`修饰，例如`final double TAX_RATE = 0.05;`
 	- `final`类似于c++中的`const`，但更泛用
 
@@ -2704,7 +2717,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	1. `final`修饰的属性叫做常量，一般用AA_BBB_C的形式命名、
 
-	2. `final`修饰的属性必须在定义时赋值，赋值可以在如下位置：
+	2. `final`修饰的**属性必须在定义时赋值**，赋值可以在如下位置：
 
 		- 定义时
 
@@ -2759,7 +2772,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	6. `final`不能修饰构造器
 
-	7. `final`和static 往往搭配使用，因为这样效率更高：不会导致类加载
+	7. `final`和static 往往搭配使用，因为这样效率更高：**不会导致类加载**
 
 		- 代码如下：
 
@@ -2786,7 +2799,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	8. 包装类（如`Integer`、`Boolean`）和`String`类是`final`类
 
-	9. `final`可以修饰形参，例如：`public void f1(final int x, int y)`
+	9. `final`可以**修饰形参**，例如：`public void f1(final int x, int y)`
 
 
 
@@ -2796,7 +2809,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. 快速入门
 
-	- 当父类的某方法不确定如何实现时，可以用`abstract`来修饰。这样，该方法就是抽象方法。随后，需要用`abstract`修饰该类，使该类称为抽象类
+	- 当父类的某方法**不确定如何实现时**，可以用`abstract`来修饰。这样，该方法就是抽象方法。随后，需要用`abstract`修饰该类，使该类称为抽象类
 
 	- 由上可得，只要类中有抽象方法，该类就是抽象类
 
@@ -2839,7 +2852,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 3. 细节
 
-	1. 抽象类不能被实例化
+	1. 抽象类**不能被实例化**
 
 	2. 抽象类不一定要包含抽象方法
 
@@ -2862,7 +2875,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	3. 类一旦包含抽象方法，则该类必须有`abstract`修饰
 
-	4. `abstract`只修饰类和方法，不修饰属性和其它的
+	4. `abstract`**只修饰类和方法**，不修饰属性和其它的
 
 	5. 抽象类作为类，可以有任意成员：非抽象方法、静态方法等
 
@@ -3109,7 +3122,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	1. 接口不能被实例化
 
-	2. 接口中，所有方法都是`public`方法（故写不写`public`都一样）。抽象方法可以不用`abstract`修饰
+	2. 接口中，**所有方法**都是`public`方法（故写不写`public`都一样）。抽象方法可以不用`abstract`修饰
 
 	3. 一个普通类实现接口，必须实现该接口的所有方法
 
@@ -3130,7 +3143,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			}
 			```
 
-	6. 接口中的属性默认是`public static final`，故定义时可以只写`int n = 10;`这种形式
+	6. 接口中的属性**默认**是`public static final`，故定义时可以只写`int n = 10;`这种形式
 
 	7. 由6可得，接口属性的访问形式：`接口名.属性名`
 
@@ -3224,7 +3237,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		}
 		```
 
-	- 当子类想要拓展功能时，可以通过实现接口的方式拓展
+	- 当子类想要**拓展功能**时，可以通过实现接口的方式拓展
 
 	- 接口可以理解为对单继承机制的一种补充
 
@@ -3345,11 +3358,11 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. 基本介绍：
 
-	- 一个类的内部又完整地嵌套了另一个类。被嵌套的类称为内部类（inner class），嵌套其他类的类称作外部类（outer class）。内部类时类的第五大成员——另外四个：属性、方法、构造器、代码块
+	- 一个类的内部又完整地嵌套了另一个类。被嵌套的类称为内部类（inner class），嵌套其他类的类称作外部类（outer class）。内部类是类的第五大成员——另外四个：属性、方法、构造器、代码块
 
 	- 基本语法：
 
-	- ```
+	- ```java
 		class Outer{//外部类
 			class Inner{//内部类
 			
@@ -3374,7 +3387,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 局部内部类时定义在外部类的局部位置，比如方法中，且有类名
 
-	- 它可以直接访问外部类的私有成员
+	- 它可以**直接访问外部类的私有成员**
 
 	- 前面不能添加访问修饰符，但可以用`final`修饰——这是它作为局部变量而言
 
@@ -3511,7 +3524,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 				}
 				```
 
-		- 该匿名内部类只在此使用一次，此后就消失了（”匿名“的含义）。但`cat`对象在方法中一直存在
+		- 该匿名内部类只在此使用一次，此后就消失了（”匿名“的双重含义：该类没有名字；该类的定义是隐式进行的）。但`cat`对象在方法中一直存在
 
 		- 代码实现（基于类）：
 
@@ -3602,7 +3615,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			}
 			```
 
-	- 匿名内部类可以直接访问外部类的私有成员
+	- 匿名内部类可**以直接访问外部类的私有成员**
 
 	- 它不能添加访问修饰符
 
@@ -3663,7 +3676,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 可以添加任意访问修饰符——与成员相同
 
-	- 它的作用域和外部类的其他成员一样，为整个类体
+	- 它的作用域和外部类的其他成员一样，为整个类体——成员内部类可以访问外部类的私有成员
 
 	- 外部类访问内部类成员：先创建对象，再访问
 
@@ -3732,7 +3745,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 它是指定义在外部类的成员位置上，且有`static`修饰
 
-	- 它可以直接访问外部类私有的静态成员，但不能直接访问非静态成员
+	- 它可以**直接访问外部类私有的静态成员**，但不能直接访问非静态成员
 
 	- 可以添加任意访问修饰符
 
@@ -3819,26 +3832,15 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        this.description = description;
 		    }
 		
-		    public String getName() {
-		        return name;
-		    }
-		
-		    public void setName(String name) {
-		        this.name = name;
-		    }
-		
-		    public String getDescription() {
-		        return description;
-		    }
-		
-		    public void setDescription(String description) {
-		        this.description = description;
-		    }
+		    public String getName() {return name;}
+		    public void setName(String name) {this.name = name;}
+		    public String getDescription() {return description;}
+		    public void setDescription(String description) { this.description = description;}
 		}
 		```
-
+		
 	- 但是，`Season`的对象应该是四个常量——不能创建更多对象，也不能修改已有的对象
-
+	
 	- 这样的设计显然是不合理的。于是，引出枚举
 
 
@@ -3916,7 +3918,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. 语法相关：
 
-	- 使用`enum`关键字开发枚举类。这个类会默认继承`Eunm`类，且该类被`final`修饰——可以用`javap`命令查看
+	- 使用`enum`关键字开发枚举类。这个类会默认继承`Eunm`类，且自动被`final`修饰——可以用`javap`命令查看
 	- 枚举对象的定义用以下形式：`对象名(参数列表)`，参数列表对应相应的构造器
 	- 如果使用无参构造器，对象名后面的`()`可以不加
 	- 有多个枚举对象时，使用`,`间隔，最后一个对象后面才是`;`
@@ -3966,7 +3968,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 
-3. `enum`常用方法
+3. `Enum`常用方法
 
 	- `toString()`：`Enum`类重写过，返回该对象的名称（常量名）
 
@@ -4335,7 +4337,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 ## 异常体系图
 
-<img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202202201312085.png" alt="image-20220220131221925" style="zoom:33%;" />
+<img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202202201312085.png" alt="image-20220220131221925" style="zoom: 50%;" />
 
 <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202202201311700.png" alt="image-20220220131157539" style="zoom: 50%;" />
 
@@ -4647,11 +4649,11 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 7. `throws`异常处理——细节
 
-	- 对于编译异常，代码中必须处理：用`throws`显式抛出，或用`try-catch`处理，而不能省略
+	- 对于编译异常，代码中必须处理：用`throws`显式抛出，或用`try-catch`处理，而**不能省略**
 
 	- 对于运行异常，代码中如果没有处理，默认以`throws`方法处理
 
-	- 子类重写父类的方法时，对抛出异常的规定是：子类方法抛出的异常必须和父类的一致，或是父类方法抛出异常类型的子类
+	- 子类**重写**父类的方法时，对抛出异常的规定是：子类方法抛出的异常**必须和父类的一致**，或是父类方法抛出**异常类型的子类**
 
 	- `throws`是抛出异常，如果方法有`try-catch`，相当于处理异常，不必再`throws`了
 
@@ -4966,7 +4968,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 ## `String`类
 
-- 注意，string虽然有字符串的意思。但在编程中，字符串定义为字符数组，即`char[]`。不要将`String`等类和字符串混淆。在java中，字符串是`String`类的一个属性
+- 注意，string虽然有字符串的意思。但在编程中，字符串定义为字符数组，即`char[]`。不要将`String`类和字符串混淆。在java中，字符串是`String`类的一个属性
 
 
 
@@ -5067,7 +5069,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- `lastIndexOf(char c)`：判断**字符最后一次**在字符串中出现的位置，没有则返回`-1`
 
-	- `subString(int beginIndex)`：返回从某一位置开始截取的子字符串
+	- `subString(int beginIndex)`：返回从某一位置开始截取，直到原字符串末尾的子字符串
 
 	- `subString(int beginIndex, int endIndex)`：返回`[beginIndex, endIndex)`区间的子字符串
 
@@ -5096,7 +5098,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		- 具体比较规则如下：
 		- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202202251006284.png" alt="image-20220225100651147" style="zoom: 33%;" />
 
-	- `String(String format, Object... args)`：静态方法，按格式返回字符串：
+	- `format(String format, Object... args)`：静态方法，按格式返回字符串：
 
 		- ```java
 			public class Test {
@@ -5239,7 +5241,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 - `ceil(x)`：向上取整
 - `floor(x)`：向下取整
 - `round(x)`：四舍五入，相当于`floor(x + 0.5)`
-- `sqet(x)`：返回$\sqrt x$
+- `sqrt(x)`：返回$\sqrt x$
 - `random()`：返回`[0, 1)`之间的随机数。
 	- 如果要返回`[a, b]`之间的整数，应使用这个式子：`(int)(a + Math.random() * (b - a + 1))` 
 - `max(x, y)`：返回两数较大值
@@ -5256,7 +5258,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	1. `Date`：精确到毫秒的日期类，代表特定时间
 
-	2. `SimpleDateFormat`：格式化（日期  $\rightarrow$ 字符串 ）和解析（字符串 $\rightarrow$ 日期）日期的具体类
+	2. `SimpleDateFormat`：用来格式化（日期  $\rightarrow$ 字符串 ）和解析（字符串 $\rightarrow$ 日期）日期的具体类
 
 	3. 定义`SimpleDateFormat`的格式：
 
@@ -5271,19 +5273,19 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			
 			public class Test {
 			    public static void main(String[] args) throws ParseException {
-			        Date date = new Date();
+			        Date date = new Date();//对象保存了当前时间的信息
 			        //日期的输出格式是默认的
 			        System.out.println(date);
 			        //构造器：public SimpleDateFormat(String pattern)
 			        SimpleDateFormat sdf = new SimpleDateFormat("HH:mm:ss yyyy年MM月dd日 E");
-			        //format方法： public final String format(Date date),格式化日期
+			        //format方法： String format(Date date) 返回一个格式化后的日期
 			        String str = sdf.format(date);
 			        System.out.println(str);
 			
 			        System.out.println("==================================================");
 			        //解析日期:
 			        String str2 = "12:01:43 2022年02月14日 星期一";
-			        //parse方法：public Date parse(String source) throws ParseException
+			        //parse方法： Date parse(String source) 
 			        Date date1 = sdf.parse(str2);//调用parse要处理ParseException这一编译异常
 			
 			        System.out.println(date1);
@@ -5447,7 +5449,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 常用静态方法：
 
 - `exit(int status)`：以`status`状态退出程序。主动退出时该参数一般为`0`
-- `arraycopy(int[] src, int srcPos, int[] dest, int destPos, int length)`：复制数组元素，以如下规则：从`src`的`srcPos`开始，复制`length`个元素到`dest`的`destPos`处（依次向后复制）。该方法适合底层调用，一般使用`Arrays.copyOf()`复制数组
+- `arraycopy(int[] src, int srcPos, int[] dest, int destPos, int length)`：复制数组元素，以如下规则：从`src`的`srcPos`开始，复制`length`个元素到`dest`的`destPos`处（依次向后复制）
 - `currentTimeMillens()`：返回当前时间距离1970.1.1零时的毫秒数
 - `gc()`：运行垃圾回收机制
 
@@ -5457,7 +5459,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 `Arrays`里面包含一系列静态方法，用于管理或操作数组（由于没有学泛型，出于方便，数组类型写成`int[]`）：
 
-- `toString(int[] arr)`：将数组拼接成字符串，并返回
+- `toString(int[] arr)`：将数组拼接成字符串，并返回。通常用于输出到屏幕以查看数组元素
 
 - `sort(int[] arr)`：自然排序——使用系统默认的比较方式
 
@@ -5467,7 +5469,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 - `copyOf(int[] arr, int len)`:返回`arr`数组的复制，但复制前`len`个元素。如果`len > arr.length`，多余的会用默认值代替
 
-- `fill(int[] arr, value)`：将`arr`中所有元素替换为`value`
+- `fill(int[] arr, value)`：将`arr`中**所有元素替换**为`value`
 
 - `equals(int[] arr1, int[] arr2)`：比较两个数组内容是否一致，返回`boolean`值
 
@@ -5515,7 +5517,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- `BigInteger(String val)`：构造器，使用字符串中保存的整数初始化
 	- `BigInteger add(BigInteger val)`：将`this`与`add`相加，做成一个新对象，并返回
 	- 其他的运算方法有`subtract(BigInteger)`、`multiply(BigInteger)`和`divide(BigInteger)`
-	- 注意，运算符只能用在基本数据类型，不能用在该类
+	- 注意，运算符只能用在基本数据类型，不能用在类上
 
 
 
@@ -5630,7 +5632,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			        if (password.length() != 6) {
 			            throw new RuntimeException("密码长度应为6");
 			        }
-			        //直接使用charAt方法遍历数组，检验每一个元素是否为数字更好
+			        //直接使用charAt方法遍历数组，检验每一个元素是否为数字即可
 			        //因为这里parseInt方法的结果是无用的
 			        //但当时一下子没有想到如何方便地遍历数组————我不想使用toCharArray方法，因为这会创建一个没用的数组
 			        try {
@@ -5757,7 +5759,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        arrayList.add("李东风");
 		        arrayList.add('诚');
 		        arrayList.add(23.4);
-		        //重写了toString()方法
+		        //ArrayList重写了toString()方法
 		        System.out.println(arrayList);
 		
 		        Collection al2 = new ArrayList();
@@ -5789,7 +5791,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 实现了`Collection`接口的集合类都有`iterator()`方法，返回一个实现了`Iterator`接口的对象——即，一个迭代器
 
-	- `Iterator`仅用于遍历**集合**，它本省不存放对象
+	- `Iterator`仅用于遍历**集合**，它本身不存放对象
 
 	- `Iterator`的两个重要方法：
 
@@ -5846,7 +5848,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        al.add(false);
 		        al.add("いな");
 		
-		        /*输入 I 生成以下模板
+		        /*输入 I 生成以下模板，也可以使用iter快捷键
 		        for (Object o :) {
 		
 		        }
@@ -5865,7 +5867,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 ## `Collection`接口的子接口：`List`实现类
 
 1. `List`接口介绍
-	- `List`集合类中元素有序，且可重复
+	- `List`集合类中元素**有序，且可重复**
 	- `List`集合类中，每个元素有相应的索引。该索引用整数标记。
 
 
@@ -5890,12 +5892,12 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 4. `ArrayList`
 	1. 基本介绍：
-		- `ArrayList`是由数组来实现数据存储的
+		- `ArrayList`的底层是由数组来实现数据存储的
 		- `ArrayList`基本等同于`Vector`。但`ArrayList`是线程不安全的，因而执行效率较高
 	2. 底层机制：
 		- `ArrayList`中维护了一个`Object`类型的数组`elementData`
-		- 当创建`ArrayList`对象时，如果使用无参构造器`ArrayList()`，`elementData`初始容量为0。第一次添加时，该数组长度扩容至10。之后每次扩容，长度都增加至原先的1.5倍
-		- 如果使用指定大小的构造器`ArrayList(int)`，则`elementData`初始容量为该指定大小。之后每次扩容，长度都增加至原先的1.5倍
+		- 当创建`ArrayList`对象时，如果使用无参构造器`ArrayList()`，`elementData`初始容量为0。第一次添加时，该数组长度扩容至10。之后每次扩容，长度都增加至原先的**1.5倍**
+		- 如果使用指定大小的构造器`ArrayList(int)`，则`elementData`初始容量为该指定大小。之后每次扩容，长度都增加至原先的**1.5倍**
 		- 具体步骤可以参考源码
 
 
@@ -5905,14 +5907,14 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		- `Vector`的数据存储在一个对象数组中，即`Object[] elementData`
 		- `Vector`是线程安全的
 	2. 底层机制：
-		- 如果调用无参构造器，则默认容量为10。容量满后，新的容量扩大至之前的两倍
-		- 调用有参构造器，以指定容量大小。容量满后，新的容量扩大至之前的两倍
+		- 如果调用无参构造器，则默认容量为10。容量满后，新的容量扩大至之前的**2倍**
+		- 调用有参构造器，以指定容量大小。容量满后，新的容量扩大至之前的**2倍**
 
 
 
 6. `LinkedList`
 	1. 基本介绍：
-		- `LinkedList`底层实现了双向量表和双端队列特点
+		- `LinkedList`底层实现了双向链表和双端队列特点
 		- 可以添加任意（可重复）的元素
 		- 线程不安全
 	2. 底层机制：
@@ -5956,6 +5958,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 3. `HashSet`
+	
 	1. 基本介绍
 	
 		- `HashSet`的底层实际是`HashMap`，见其构造器：
@@ -5971,7 +5974,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		- 分析`HashSet`的底层就是分析`HashMap`，后者的底层是：数组＋链表＋红黑树
 		- `HashSet`的`add`方法在底层是如何实现的——使用`hashCode`和`equals`方法：
 		- 添加元素时，先得到`Hash`值，再由算法转为索引值
-		- 在存储数据的表`table`中，查看该索引是否已经存放元素
+		- 在存储数据的表`table`中，查看该索引处是否已经存放元素
 		- 如果没有，直接加入
 		- 如果有，调用`equals`方法比较。如果相同，放弃添加。如果不相同，比较（该链表/红黑树中的）下一个元素。如果到最后都没有相同元素，才添加该元素
 		- 在Java 8中，如果一条链表的元素个数达到`TREEIFY_THERSHOLD`(默认为8)，且`table`的长度大于等于`MIN_TERRIFY_CAPACITY`（默认为64），就会将该条链表树化
@@ -5979,7 +5982,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	
 	3. 源码分析得到的一些结论：
 	
-		- `Hashset`的属性`map`是一个`HashMap`对象——双列集合。具体地，`map`将`add`方法传入的值作为key，而将该类的静态方法`PRESENT`作为value。`PRESENT`的类型是`Object`，在这里起占位的作用
+		- `Hashset`的属性`map`是一个`HashMap`对象——双列集合。具体地，`map`将`add`方法传入的值作为key，而将该类的静态属性`PRESENT`作为value。`PRESENT`的类型是`Object`，在这里起占位的作用
 	
 		- `HashMap`的方法`hash`实现如下——这是个与`hashCode`不同的方法：
 	
@@ -5996,9 +5999,9 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	
 	4. 扩容机制
 		
-		- `map`第一次添加时，`table`扩容到16，临界值`threshold`的值为`16 * loadFactor = 16 * 0.75 = 12`
-		- 如果`map`中的元素数量达到了临界值，则`table`扩大一倍，临界值相应变化，即`32`和`32 * 0.75 = 24`。以此类推。
-		- 如果一条链表的元素个数达到`TREEIFY_THERSHOLD`(默认为8)，且`table`的长度大于等于`MIN_TERRIFY_CAPACITY`（默认为64），就会将该条链表树化。否则，仍采用数组扩容机制，即：
+		- `map`**第一次**添加时，`table`扩容到**16**，临界值`threshold`的值为`16 * loadFactor = 16 * 0.75 = 12`
+		- 如果`map`中的**元素数量达到了临界值**，则**`table`扩大一倍**，临界值相应变化，即`32`和`32 * 0.75 = 24`。以此类推。
+		- 如果**一条链表的元素个数**达到`TREEIFY_THERSHOLD`(默认为**8**)，且**`table`的长度大于等于**`MIN_TERRIFY_CAPACITY`（默认为**64**），就会将**该条链表树化**。否则，仍对`table`扩容，即：
 	   - 数组的长度小于`MIN_TERRIFY_CAPACITY`，但一条链表的元素达到`TREEIFY_THERSHOLD`时，即使`map`中的元素数量没有达到临界值，`table`的长度仍将翻倍。
 	   
 	5. 课堂练习
@@ -6054,7 +6057,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		   }
 		   ```
 		
-		- 思考：为什么要同时重写`equals()`和`hashCode()`方法？（我现在也不知道答案:sweat:）
+		- 思考：为什么要同时重写`equals()`和`hashCode()`方法？
 		
 		- 目前得出的结论是：重写`hashCode`方法，以保证相同元素会落到`table`的同一个索引。再用`equals`方法检查该链表（或红黑树）是否存在相同元素
 	
@@ -6066,14 +6069,14 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	1. 基本说明
 		- `LinkedHashSet`是`HashSet`的子类
 		- `LinkedHashSet`底层是一个`LinkedHashMap`。后者底层维护了一个数组 + 双向链表
-		- `LinkedHashSet`根据元素的`hashCode`值来决定元素的存储位置，同时使用链表维护元素的次序——使元素在遍历时可以按照插入顺序输出
+		- `LinkedHashSet`根据元素的`hashCode`值来决定元素的存储位置，同时使用链表维护元素的——使元素在遍历时可以按照插入顺序输出
 		
 	2. 底层机制（源码分析）
 		- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203020756277.png" alt="image-20220302075648678" style="zoom: 33%;" />
 		
 		- 创建`LinkedHashSet`时，调用其父类`HashSet`的构造器，为（父类）属性`map`创建了一个`LinkedHashMap`对象
 		
-		- `LinkedHashMap`中，同样有一个数组`table`，但类型（元素的运行类型，编译类型仍为`Node[]`）为`Entry[]`，见如下定义：
+		- `LinkedHashMap`中，同样有一个数组`table`，但类型（指元素的运行类型，编译类型仍为`Node[]`）为`Entry[]`，见如下定义：
 		
 		- ```java
 			static class Entry<K,V> extends HashMap.Node<K,V> {
@@ -6098,7 +6101,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 		- `TreeSet`可以按照自定义的顺序存储元素，从而使遍历有序
 
-		- 不能添加`null`
+		- **不能添加`null`**
 
 		- 见代码：
 
@@ -6129,7 +6132,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		- 树的排序规则由创建对象时传入的`Comparator`接口类确定
 		- 加入`TreeSet`的对象是以键的形式存在`TreeMap`中的，而值仍是一个静态`Object`类属性`PRESENT`（起占位作用）
 		- `TreeMap`使用`comparator`来判断传入的值是否重复。如果重复，就替换值。否则加入到`TreeMap`中
-		- 因此，对于`TreeSet`，如果加入的两个元素按照`comparator`比较的结果是相等，则后加入的元素无法加入（改变以上代码中`compare`方法的实现即可证明）
+		- 因此，对于`TreeSet`，如果加入的两个元素按照`comparator`比较的结果是相等，则后加入的元素无法加入（改变以上代码中`compare`方法的实现即可证明），因为`TreeSet`中的元素是`TreeMap`中的键，而键在添加后是无法改变的
 		- 如果创建对象时使用无参构造器，则添加元素时的比较规则为该元素类型的`compareTo()`方法
 
 
@@ -6138,13 +6141,13 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. `Map`接口特点
 	- `Map`用于保存具有映射关系的数据：`key -- value`（双列集合）
-	- `key`和`value`可以是任何引用类型的数据（包括`null`），它们会被封装到`HashMap$Node`对象中
+	- `key`和`value`可以是任何引用类型的数据（包括`null`），它们会被封装到`HashMap$Node`（`HashMap`的内部类`Node`）对象中
 	- `key`不允许重复，而`value`可以重复
 
 
 
 2. `Map`常用方法
-	- `put(Object key, Object value)`：添加键值对
+	- `put(Object key, Object value)`：添加（修改）键值对
 	- `remove(Object key)`：根据键删除键值对
 	- `get(Object key)`：根据键返回值
 	- `size()`：返回键值对数目
@@ -6223,11 +6226,11 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. `HashMap`
 	1. 基本介绍
-		- `HashMap`是`Map`接口使用频率最高的实现类
+		- `HashMap`是`Map`接口**使用频率最高**的实现类
 		- 它以键值对的形式存储数据（每个键值对的类型是`HashMap$Node`）
 		- 如果添加相同的`key`，会覆盖原来的`value`。这相当于修改
 		- 与`HashSet`一样，不能保证输出顺序与输入顺序相同
-		- `HashMap`是线程不安全的
+		- `HashMap`是**线程不安全**的
 	2. 底层机制
 		- `HashMap`的底层机制在分析`HashSet`时已经分析了。唯一需要强调的是，当要添加的键值对的`key`已经存在时，旧的值会被替换。而这一点在`HashSet`中是无关紧要的。
 
@@ -6236,22 +6239,25 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 2. `Hashtable`
 	1. 基本介绍
 		- 该类存放键值对，即`key --- value`
-		- 键和值都不能为`null`
+		- **键和值都不能为`null`**
 		- `Hashtable`使用方法基本和`HashMap`一样
-		- `Hashtable`是线程安全的。而`HashMap`是线程不安全的
+		- `Hashtable`是**线程安全**的。而`HashMap`是线程不安全的
 		- 因此，`HashMap`的效率比`Hashtable`高
 	2. 底层机制
-	  - 底层是数组（`table`）+单链表
-	  - 当元素个数`count >= threshold`时（后者为`capacity * 0.75`），执行`rehash()`函数
-	  - `rehash()`函数将容量扩大至`2 * capacity + 1`，并对原先`table`中的**每一个**元素重新哈希，存放到新的`table`中
-
+	
+		  - 底层是数组（`table`）+ 单链表
+	
+		  - 当元素个数`count >= threshold`时（后者为`capacity * 0.75`），执行`rehash()`函数
+	
+		  - `rehash()`函数将`table`容量扩大至`2 * capacity + 1`，并对原先`table`中的**每一个**元素重新哈希，存放到新的`table`中
+	
 	
 	
 3. `Properties`
 	1. 基本介绍
 		- `Properties`继承`Hashtable`类并且实现`Map`接口，以键值对形式存放数据
 		- 故使用方法和`Hashtable`类似
-		- `Properties`还可用于从`.properties`文件中加载数据到`Properties`对象，并进行读取和修改。这类文件通常作为配置文件使用
+		- `Properties`可用于从`.properties`文件中加载数据到`Properties`对象，并进行读取和修改。这类文件通常作为配置文件使用
 
 
 
@@ -6259,7 +6265,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 基本原理已经在分析`TreeSet`时分析过了
 
-	- 传入的键不能为`null`
+	- **传入的键不能为`null`**
 
 	- 需要再次强调添加键值对时的重复问题：
 
@@ -6308,7 +6314,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 ## 总结：开发中如何选择集合类
 
-- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203040743056.png" alt="image-20220304074316320" style="zoom:33%;" />
+- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203040743056.png" alt="image-20220304074316320" style="zoom:50%;" />
 
 
 
@@ -6321,9 +6327,9 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- `HashSet`去重机制：
 
 		- 使用`hashCode()` + `equals()`方法：
-		- 存入对象时，会调用其`hashCode()`方法，运算得到一个`hash`值，通过`hash`值运算得到对应的索引
+		- 存入对象时，会调用其`hashCode()`方法，运算得到一个`hash`值，通过`hash`值运算得到对应的`table`的索引
 		- 如果`table`索引所在的位置为`null`，则直接加入。
-		- 如果该位置有元素，则对该位置的结构（链表 / 红黑树）中的元素遍历比较（使用`equals()`方法）。如果全都不相同，则添加。如果存在相同元素，则添加失败。
+		- 如果该位置有元素，则对该位置的结构（链表 / 红黑树）中的元素遍历比较（使用`equals()`方法）。如果全都不相同，才添加。如果存在相同元素，则添加失败。
 		- 这道题也回答了这一问题——为什么要同时重写`hashCode()`和`equals()`方法
 
 	- `TreeSet`的去重机制：
@@ -6362,7 +6368,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 2. 使用泛型的好处
-	- 编译时，会检查添加的元素的类型
+	- **编译时**，会检查添加的元素的类型
 	- 减少了类型转换的次数
 	- 不再提示编译警告
 
@@ -6374,7 +6380,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 泛型又称参数化类型，是JDK 5.0之后的新特性，以解决数据类型的安全性问题。
 
-	- 泛型可以理解为数据类型的类型，其值代表某一具体地数据类型，如`String`、`Integer`
+	- 泛型可以理解为数据类型的类型，其值代表某一具体的数据类型，如`String`、`Integer`
 
 	- 使用泛型，只需在类实例化时指定需要的数据类型即可。
 
@@ -6420,7 +6426,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			```
 
 	- 语法中，`T`、`K`和`V`表示类型
-	- 可以使用任意字母表示泛型，但常用`T`表示——type
+	- 可以使用任意字母表示泛型，但常用`T`表示——type的意思
 
 
 
@@ -6468,9 +6474,9 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 4. 使用细节
 
-	- `<>`内只能传入引用类型，不能传入基本数据类型
+	- `<>`内只能传入引用类型，**不能传入基本数据类型**
 
-	- 在指定泛型基本类型后，可以传入该类型或其子类
+	- 在指定泛型基本类型后，可以**传入该类型或其子类**
 
 		- ```java
 			public class Test {
@@ -6494,7 +6500,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 		- ```java
 			ArrayList<String> strings = new ArrayList<>();
-			ArrayList<String> strings2 = new ArrayList<String >();
+			ArrayList<String> strings2 = new ArrayList<String>();
 			```
 
 		- 在开发中，往往使用第一种格式来简写。这时，编译器会进行类型推断。
@@ -6515,12 +6521,14 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			}
 			```
 
+	- 泛型的值**不能是基本数据类型**
+
 	- 普通成员可以使用泛型
 
-	- 使用泛型的数组，不能初始化——因为编译器不知道分配多大的空间
+	- **不能使用泛型的数组**——因为编译器不知道分配多大的空间。可以考虑使用`Object[]`，集合类的源码就是这么写的
 
-	- 泛型类的类型，是在创建对象时确定的
-
+	- 泛型类的类型，是在**创建对象时**确定的
+	
 	- 静态方法**不能**使用泛型——因为类加载在创建对象前
 
 
@@ -6535,7 +6543,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 接口中，静态成员也不能使用泛型
 
-	- 泛型接口的类型，在继承接口或实现接口时指定
+	- 泛型接口的类型，在**继承接口或实现接口时指定**
 
 	- 没有指定类型，默认为`Object`
 
@@ -6575,7 +6583,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 泛型方法可以定义在普通类中，也可定义在泛型类中
 
-	- 当泛型方法被调用时，类型会确定（一般是由传入的参数类型确定）。也是在编译层面确定的
+	- 当泛型方法被调用时，类型会自动确定（一般是由传入的参数类型确定）。也是在编译层面确定的
 
 	- 对于泛型类中的方法，如`public void eat(E e)`，它不是泛型方法，只是使用了类的泛型
 
@@ -6611,7 +6619,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 ## 泛型继承和通配符
 
-1. 泛型不具备继承性，以下语句是非法的：
+1. **泛型不具备继承性**，以下语句是非法的：
 
 	- ```java
 		List<Object> list = new ArrayList<String>();
@@ -6683,7 +6691,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203061458347.png" alt="image-20220306145855206" style="zoom:33%;" />
 	- 该图说明了Java坐标体系。坐标原点位于左上角，以像素为单位。每一个像素用数对`(x, y)`来表示
 	- 何为像素？计算器屏幕显示的内容由屏幕上的一个个像素组成。如果显示器分辨率为800 *600，则表示该屏幕一行有800个点，共600行。故该屏幕共有480000个像素
-	- 该坐标系中，y轴+方向朝下——这和二维数组/二维矩阵的行的编号一样
+	- 该坐标系中，y轴正方向朝下——这和二维数组/二维矩阵的行的编号一样
 
 ## java绘图技术
 
@@ -6714,9 +6722,9 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		
 		//JPanel类似画板，在上面才能画图
 		class MyPanel extends JPanel {
-		    @Override
 		    //Graphics 类似于画笔，需要在画板上画图。
 		    //画什么形状取决于调用Graphics的哪个方法
+		    @Override
 		    public void paint(Graphics g) {
 		        super.paint(g);//这句话必须保留
 		
@@ -6878,17 +6886,12 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 3. 深入理解
 	1. 事件源：一个产生事件的对象，比如按钮、窗口
 	2. 事件：承载事件源状态改变时的对象，例如键盘事件、鼠标事件。此时，会生成一个事件对象，该对象保存了当前事件的很多信息。在`java.awt.event`包和`javax.swing.event`包中定义了各种事件
-	3. 事件类型：<img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203100641597.png" alt="image-20220310064101398" style="zoom:33%;" />
-	4. 事件监听器接口：
+	3. 事件类型：<img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203100641597.png" alt="image-20220310064101398" style="zoom: 50%;" />
+	4. 事件监听器**接口**：
 		- 当事件源产生一个事件，可以传送给事件监听者处理
 		- 事件监听者是一个类，它实现了某个事件监听器接口，从而对接收到的事件进行处理
 		- 事件监听器接口有多种，不同事件监听器接口可以监听不同事件。一个类可以实现多个监听接口
 		- 常用的接口：<img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203100645191.png" alt="image-20220310064521984" style="zoom:33%;" />
-		- 
-
-
-
-
 
 
 
@@ -6940,13 +6943,17 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	4. 单线程：同一个时刻，只允许执行一个线程
 	5. 多线程：同一时刻，可以执行多个线程
 	6. 并发：
-	  - 同一时刻，多个任务交替执行。由于CPU在任务间的切换速度极快，造成一种“同时”的错觉。
-	  - 简而言之，单核CPU执行的多任务就是并发
-	  - <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203110743672.png" alt="image-20220311074335476" style="zoom: 33%;" />
+	
+		  - 同一时刻，多个任务交替执行。由于CPU在任务间的切换速度极快，造成一种“同时”的错觉。
+		  - 简而言之，单核CPU执行的多任务就是并发
+		  - <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203110743672.png" alt="image-20220311074335476" style="zoom: 33%;" />
 	7. 并行：
-	  - 同一时刻，多个任务同时执行
-	  - 多核CPU可以实现并行
-	  - <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203110744584.png" alt="image-20220311074431415" style="zoom:33%;" />
+	
+		  - 同一时刻，多个任务同时执行
+	
+		  - 多核CPU可以实现并行
+	
+		  - <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203110744584.png" alt="image-20220311074431415" style="zoom:33%;" />
 
 
 
@@ -7047,8 +7054,8 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- 为什么使用`start()`方法，而不直接使用`run()`方法
 	
 	  - 直接使用`run()`方法，就不会创建`Thread-0`子线程。`main`线程在执行完`run()`方法后才会执行后面的内容——这时，不涉及多线程问题
-	  - `start()`方法负责创建子线程。具体来说，该方法将调用`start0()`方法，定义如下：`private native void start0();`（本地方法由JVM调用），该方法负责创建线程，并调用`run()`方法
-	  - <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203112006597.png" alt="image-20220311200622437" style="zoom:33%;" />
+	  - `start()`方法负责创建子线程。具体来说，该方法将调用`start0()`方法，定义如下：`private native void start0();`（`native`表示本地方法，由JVM调用），该方法负责创建线程，并调用`run()`方法
+	  - <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203112006597.png" alt="image-20220311200622437" style="zoom: 50%;" />
 
 
 
@@ -7171,7 +7178,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- `run`：调用线程的`run`方法
 	- `setPriority`：更改线程优先级
 	- `getPriority`：获取线程优先级
-	- `sleep`：让正在执行的线程休眠指定毫秒数
+	- `sleep`：静态方法，让正在执行的线程休眠指定毫秒数
 	- `interrupt`：中断线程
 
 2. 注意事项
@@ -7298,7 +7305,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 ## 线程生命周期
 
 1. `Thread.State`枚举类表示了线程的几种状态;
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203121536519.png" alt="image-20220312153654273" style="zoom:33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203121536519.png" alt="image-20220312153654273" style="zoom: 50%;" />
 
 
 
@@ -7353,18 +7360,18 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 
-2. 同步具体方法——`synchronized`
+2. 同步具体手段——`synchronized`
 
 	1. 同步代码块
 
-		- ```
+		- ```java
 			synchronized(对象){//只有得到对象锁，才能操作同步代码
 			}
 			```
 
 	2. 声明方法为同步方法
 
-		- ```
+		- ```java
 			public synchronized void m(){}
 			```
 
@@ -7414,7 +7421,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 3. 同步原理分析
 	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203121657295.png" alt="image-20220312165703001" style="zoom: 25%;" />
-	- 执行同步方法时，三个线程同时来争夺对象锁。所以叫对象锁，是该对象保存了锁打开还是关闭这一信息。故这把锁与方法无关
+	- 执行同步方法时，三个线程同时来争夺对象锁。之所以叫对象锁，是因为该对象本身保存了锁打开还是关闭这一信息。故这把锁与方法无关
 	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203121706543.png" alt="image-20220312170605886" style="zoom: 25%;" />
 	- 当一个线程获得锁后，执行该方法。之后锁关闭，三个线程再次争夺该锁
 
@@ -7432,11 +7439,11 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- `synchronized`关键字用来与对象的互斥锁联系。使用该关键字的对象，任一时刻只能由一个线程访问
 
-	- 同步的局限性：会导致线程的执行效率要降低——此时，操作变为单线程，但任务总数没有变化
+	- 同步的局限性：会导致线程的执行效率要降低——此时，操作变为单线程，但任务总数没有变化（多个线程在这个关口被阻塞，只能一个一个地进入关口）
 
 	- 非静态同步方法的锁可以是`this`，也可以是其他对象
 
-	- 静态同步方法的锁为当前类本身
+	- 静态同步方法的锁为当前类本身（当前类的`Class`对象）
 
 	- 代码演示;
 
@@ -7469,11 +7476,14 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 2. 细节
 
-  - 非静态同步方法，默认锁对象为`this`
-  - 静态同步方法，默认锁对象为`类名.class`
-  - `synchronized`是一把非公平锁，即同一线程可能连续多次获取到这把锁
+	  - 非静态同步方法，默认锁对象为`this`
 
-3. 实现步骤：
+	  - 静态同步方法，默认锁对象为`类名.class`
+
+	  - `synchronized`是一把非公平锁，即同一线程可能连续多次获取到这把锁
+
+
+3. 互斥锁实现步骤：
 
 	- 先分析上锁的代码
 
@@ -7515,6 +7525,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        B.setName("B");
 		        A.start();
 		        B.start();
+		        
 		        int time = 0;
 		        while (true) {
 		            Thread.sleep(1000);
@@ -7551,8 +7562,8 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        }
 		    }}
 		```
-
-	- 某一对象作为锁资源被占用后，使用该对象作为互斥锁的其他地方也无法被访问：在代码中，`B`线程先占用`o2`锁资源，导致`A`线程无法占用。`synchronized (o2)`在代码多处被使用，而不是只能使用一次
+		
+	- 某一对象作为锁资源被占用后，使用该对象作为互斥锁的其他地方也无法被访问：在代码中，`B`线程先占用`o2`锁资源，导致`A`线程无法占用。对于`o1`锁资源来说也是如此。`synchronized (o2)`能够在代码多处被使用，而不是只能使用一次
 
 
 
@@ -7634,7 +7645,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			}
 			```
 
-		- 本来想用`Watcher`类实现`KeyListener`接口，但没有成功
+		- 本来想用`Watcher`类实现`KeyListener`接口，但没有成功——我不会写这个功能
 
 		- 使用`Scanner`对象，在接收输入之前，该线程会一直停在某处，效果和使用`KeyListener`一样。且停止`printer`线程后不会再次运行，没必要实现`KeyListener`接口
 
@@ -7674,7 +7685,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- 在多线程的实际应用中，应明确：
 		- `start()`方法创建线程，线程调用**一次**`run()`方法。至于实现不断重绘子弹、敌方坦克能够自由移动等功能，是依靠`run()`方法中的`while(true){}`，而与多线程问题无关
 		- 主线程能够用`start()`创建线程。而线程一旦创建，就**不受主线程的控制**，直至自己消亡。故，重写的`run()`方法应保证能够结束
-		- 多个线程只是在时间上并发，每个线程能够使用的数据（即对象）都是定义在主线程中。因此，`Bullet`对象的`run()`方法只负责改变子弹的位置，而`MyPanel`对象的`run()`方法专门调用`repaint()`方法不断画图
+		- 多个线程只是在时间上并发，每个线程能够使用的数据（即对象）都是定义在主线程中、存储在同一块内存中。因此，`Bullet`对象的`run()`方法只负责改变子弹的位置，而`MyPanel`对象的`run()`方法专门调用`repaint()`方法不断画图
 	- 实现不同的功能并不需要新的知识点，但对业务逻辑能力有一定需求——不能写bug
 	- 使用封装、继承以精简代码，提高代码复用性
 	- 一些功能的实现，比如判断坦克是否被击中，只依靠单纯的循环，效率较低。若是使用特定的算法或数据结构，能提高效率——虽然我没有想过如何优化
@@ -7707,7 +7718,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 3. 创建`File`对象和创建文件
 
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203151740631.png" alt="image-20220315174032446" style="zoom:33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203151740631.png" alt="image-20220315174032446" style="zoom: 50%;" />
 
 	- 构造器：
 
@@ -7819,7 +7830,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- `java.io`包下提供了各种“流”类和接口，用以获取不同种类的数据，并通过方法输入或输出数据
 	- 输入：读取外部数据（磁盘、光盘、网络、数据库等）到程序（内存）中
 	- 输入：将程序（内存）数据输出到外部
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203160837167.png" alt="image-20220316083752917" style="zoom:25%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203160837167.png" alt="image-20220316083752917" style="zoom: 50%;" />
 
 
 
@@ -7846,11 +7857,11 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		| 输出流   | `OutputStream` | `Writer` |
 
 		- Java的IO流涉及40多个类，都是从上述4个抽象基类派生出来的
-		- 这些子类名称都以父类名作为后缀
+		- 其子类名称都以父类名作为后缀
 
 	5. I/O体系图：
 
-		- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203160844368.png" alt="image-20220316084433182" style="zoom: 50%;" />
+		- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203160844368.png" alt="image-20220316084433182" style="zoom: 70%;" />
 
 
 
@@ -7870,11 +7881,6 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		import java.io.FileInputStream;
 		import java.io.IOException;
 		
-		/**
-		 * C:\\Users\\Morgan\\Desktop\\temp\\text.txt文件中，内容如下：
-		 * hellowowo
-		 * melt-lilith
-		 */
 		public class Test {
 		    public static void main(String[] args) throws IOException {
 		//        f1();
@@ -8027,7 +8033,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- `write(int)`：写入单个字符
 	- `write(char[])`：写入数组
 	- `write(char[], int offset, int len)`：写入数组的指定部分
-	- 注意，`FileWriter`使用后，必须使用`close()`或`flush()`，否则无法写入——内存中的流对象在程序结束后会被销毁
+	- 注意，`FileWriter`使用后**，必须使用`close()`或`flush()`，**否则无法写入——内存中的流对象在程序结束后会被销毁
 
 
 
@@ -8036,12 +8042,6 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	```java
 	import java.io.FileReader;
 	import java.io.IOException;
-	
-	/**
-	 * C:\Users\Morgan\Desktop\temp\a.txt中的文件内容为
-	 * 生活就像海洋，只有意志坚强的人。。。
-	 * This is an apple, I like apples
-	 */
 	
 	public class Test {
 	    public static void main(String[] args) {
@@ -8083,7 +8083,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		            fileWriter = new FileWriter(filePath, true);
 		            fileWriter.write('\n');
 		            fileWriter.write("美少女が");
-		            fileWriter.write("好きではないか", 0, 2);
+		            fileWriter.write("好きではないか", 0, 2);//写入从索引0开始的2个字符，即"好き"
 		        } catch (IOException e) {
 		            e.printStackTrace();
 		        } finally {
@@ -8115,7 +8115,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 2. 处理流（包装流）
 
-	- 处理流（也叫包装流），是连接在已存在的流之上，为程序提供更为强大的读写功能，也更加灵活，如`BufferedReader`
+	- 处理流（也叫包装流），是连接在**已存在**的流之上，为程序提供更为强大的读写功能，也更加灵活，如`BufferedReader`
 
 	- 以`BufferedReader`部分源码为例：
 
@@ -8150,8 +8150,8 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 1. 基本介绍
 	- 两者都是字节处理流
 	- 继承关系如下：
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203190743689.png" alt="屏幕截图(25)" style="zoom:33%;" />
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203190745999.png" alt="屏幕截图(26)" style="zoom:33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203190743689.png" alt="屏幕截图(25)" style="zoom:40%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203190745999.png" alt="屏幕截图(26)" style="zoom:40%;" />
 	- 如上图，这两个类本身没有包装的流对象的属性，而是在它们的父类中有该属性
 
 
@@ -8226,7 +8226,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        //BufferWriter本身并不提供构造器来决定文件写入方式是append还是覆盖
 		        BufferedWriter bufferedWriter = new BufferedWriter(new FileWriter(filePath, false));
 		        bufferedWriter.write("homestay la");
-		        bufferedWriter.newLine();//插入一个和系统相关的换行符——不一定是'\n'
+		        bufferedWriter.newLine();//插入一个和系统相关的换行符——不一定是'\n'，视操作系统而定
 		        bufferedWriter.write("graceが好き");
 		
 		        bufferedWriter.close();
@@ -8267,13 +8267,13 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. 对象处理流引入
 	- 需求：将一个自定义对象保存到文件中，且能从文件中恢复。例如`Dog dog = new Dog("大黄", 3);`
-	- 实现该需求，不仅需要保存类的属性的值，还需要保存类属性的数据类型和类信息
+	- 实现该需求，不仅需要保存类的属性的值，还需要保存类属性的**数据类型和类信息**
 	- 该需求，就是将基本数据类型或对象进行序列化和反序列化操作
 
 
 
 2. 序列化和反序列化
-	- 序列化是在保存数据时，保存数据的值和数据类型
+	- 序列化是在保存数据时，保存数据的**值和数据类型**
 	- 反序列化是在恢复数据时，恢复数据的值和数据类型
 	- 若需要让某个对象支持序列化机制，则必须让其类是可序列化的。该类必须实现下面两个接口之一：
 		- :one:`Serializable`：这是一个标记接口（没有方法需要实现），通常使用这个
@@ -8301,7 +8301,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		
 		public class Test {
 		    public static void main(String[] args) throws IOException {
-		        //.dat后缀也可以改为.txt。但数据是以特定方式存储的，并不是纯文本形式
+		        //.dat后缀也可以改为.txt。但数据是以特定方式存储的，并不是纯文本形式，所以后缀名是无所谓的
 		        String filePath = "C:\\Users\\Morgan\\Desktop\\temp\\a.dat";
 		        ObjectOutputStream oos = new ObjectOutputStream(new FileOutputStream(filePath));
 		
@@ -8324,22 +8324,10 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        this.name = name;
 		        this.age = age;
 		    }
-		
-		    public String getName() {
-		        return name;
-		    }
-		
-		    public void setName(String name) {
-		        this.name = name;
-		    }
-		
-		    public int getAge() {
-		        return age;
-		    }
-		
-		    public void setAge(int age) {
-		        this.age = age;
-		    }
+		    public String getName() {        return name;    }
+		    public void setName(String name) {        this.name = name;    }
+		    public int getAge() {        return age;    }
+		    public void setAge(int age) {       this.age = age;    }
 		}
 		```
 
@@ -8362,9 +8350,9 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        System.out.println(ois.readInt());
 		        System.out.println(ois.readBoolean());
 		        System.out.println(ois.readDouble());
-		        System.out.println(ois.readUTF());
+		        System.out.println(ois.readUTF());//读取字符串
 		
-		        //1.会抛出ClassNotFoundException，因此反序列化时必须能引用到该类
+		        //1.可能抛出ClassNotFoundException，因此反序列化时必须能引用到该类
 		        //2.由于序列化会保存类信息，类成员只要变动(比如添加一个方法)，就需要重新序列化
 		        //不然在反序列化时会报错
 		        Object o = ois.readObject();
@@ -8383,22 +8371,10 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        this.name = name;
 		        this.age = age;
 		    }
-		
-		    public String getName() {
-		        return name;
-		    }
-		
-		    public void setName(String name) {
-		        this.name = name;
-		    }
-		
-		    public int getAge() {
-		        return age;
-		    }
-		
-		    public void setAge(int age) {
-		        this.age = age;
-		    }
+		    public String getName() {        return name;    }
+		    public void setName(String name) {        this.name = name;    }
+		    public int getAge() {        return age;    }
+		    public void setAge(int age) {        this.age = age;    }
 		}
 		```
 
@@ -8408,7 +8384,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- 读写顺序要一致
 	- 要求序列化的对象，需要实现`Serializable`接口
 	- 序列化类中可以添加`private static final long serialVersionUID`属性，作为序列化的版本号，提高兼容性。拥有该属性的类，如果添加其他成员，序列化时系统会将修改的类作为一个新版本，而不是一个全新的类。（后者会抛出异常，无法序列化）
-	- 序列化时，默认会将所有属性序列化，但被`static`或`transient`（该关键字专门用来修饰不想被序列化的属性）修饰的属性是例外
+	- 序列化时，**默认会将所有属性序列化**，但被`static`或`transient`（该关键字专门用来修饰不想被序列化的属性）修饰的属性是例外
 	- 序列化时，类的属性也必须能够序列化
 	- 序列化具备继承性，例如`Integer`继承`Number`，而`Number`实现`Serializable`接口，因此`Integer`可以序列化
 
@@ -8427,15 +8403,19 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. 转换流引入
 
-	- 使用字节输入流打印文本文件（包含中文），会输出乱码
+	- 使用字节输入流打印文本文件（文本中有中文字符），会输出乱码
 
 	- 输出乱码的原因，是没有指定文件的编码
 
-	- 用以下代码读取包含中文的文本文件，并将该文件编码从UTF-8改为ANSI（中文系统中，ANSI等于GBK）：
+	- 用以下代码读取包含中文的文本文件，并将该文件编码从UTF-8改为ANSI（中文系统中，ANSI等于GBK），观察输出的效果：
 
 	- ```java
 		import java.io.*;
-		
+		/*
+		a.txt 中不妨存入以下内容：
+		I like 苹果
+		我喜欢 apple
+		*/
 		public class Test {
 		    public static void main(String[] args) throws IOException {
 		        String filePath = "C:\\Users\\Morgan\\Desktop\\temp\\a.txt";
@@ -8450,9 +8430,9 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        br.close();
 		    }}
 		```
-
 	
-
+	
+	
 	
 
 
@@ -8479,7 +8459,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	  public class Test {
 	      public static void main(String[] args) throws IOException {
 	          String filePath = "C:\\Users\\Morgan\\Desktop\\temp\\a.txt";
-	  
+	  		//BufferedReader只是起到方便打印的作用，与这里的问题无关
 	          BufferedReader br = new BufferedReader(new InputStreamReader(
 	                  new FileInputStream(filePath), "gbk"));
 	  
@@ -8583,7 +8563,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 1. 引入
 
-	- 对于以下`a.properties`文件，获取各个键对应的值（对`Properties`类的介绍，参考[`Map`接口实现类](# `Map`接口实现类)第3条）
+	- 需求：对于以下`a.properties`文件，获取各个键对应的值（对`Properties`类的介绍，参考[`Map`接口实现类](# `Map`接口实现类)第3条）
 
 		- ```properties
 			ip=192.168.1.1
@@ -8613,11 +8593,11 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 3. 常用方法
-	- `load`：加载输入流（包含配置文件的键值对）到`Properties`对象中
+	- `load`：加载输入流（包含配置文件的键值对信息）到`Properties`对象中
 	- `list`：将数据打印到指定位置（通过打印流）
 	- `getProperty`：根据键获取值
 	- `setProperties`：设置键值对
-	- `store`：将类中的键值对存储到配置文件中。
+	- `store`：将类中的键值对信息写入到配置文件中。
 
 
 
@@ -11145,7 +11125,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- 返回满足条件的某列的最大值/最小值
 
 	- ```mysql
-		select avg(列名) from 表名 [where 条件]
+		select min(列名) from 表名 [where 条件]
 		```
 
 	- ```mysql
