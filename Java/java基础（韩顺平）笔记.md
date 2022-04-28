@@ -6,7 +6,9 @@
 
 - 课程全部学完
 
-# Version 1.1 时间：
+# Version 1.1 时间：2022年4月28日
+
+- 一些校对
 
 # 序言
 
@@ -8804,7 +8806,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- 通信的两端都有Socket，是两台及其间通信的端点
 	- 网络通信其实就是Socket间的通信
 	- Socket允许程序把网络连接当成一个流，数据在两个Socket间通过IO传输
-	- 一般，主动发起通信的应用程序为客户端符，等待通信请求的为服务端
+	- 一般，主动发起通信的应用程序为客户端，等待通信请求的为服务端
 	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203251631916.png" alt="image-20220325163113898" style="zoom:33%;" />
 
 
@@ -8857,7 +8859,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		            System.out.println(new String(buffer, 0, readLen));
 		        }
 		
-		        System.out.println(System.currentTimeMillis()+ "服务端输出完毕");
+		        System.out.println(System.currentTimeMillis()+ "服务端打印完毕");
 		
 		        //释放资源
 		        inputStream.close();
@@ -9479,7 +9481,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 4. 项目思路分析
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203271531422.png" alt="image-20220327153132740" style="zoom: 33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202203271531422.png" alt="image-20220327153132740" style="zoom: 50%;" />
 	- 客户端与服务端间使用对象流进行数据传输 
 	- 由于网络通信可以说是Socket间的IO，对于服务端，每当有一个客户端与它连接，都需要创建一个`Socket`对象。
 	- 又因为多台客户端对服务端的通信是同时进行的，需要使用线程。在这里，我们让线程持有`Socket`对象
@@ -9952,7 +9954,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	2. 连接阶段——验证
 
-		- JVM的目的是：确保`.class`文件的字节流包含的信息符合当前JVM的要求，并且不会危害JVM自身的安全。
+		- 目的：确保`.class`文件的字节流包含的信息符合当前JVM的要求，并且不会危害JVM自身的安全。
 		- 这些信息包括：文件格式验证（`.class`文件是否以魔数`0xcafebabe`开头）、元数据验证、字节码验证和符号应用验证
 		- 可以使用`-Xverify:none`参数来关闭大部分的类验证措施，缩短JVM加载时间
 
@@ -9979,7 +9981,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	5. 初始化阶段
 
-		- 该阶段才开始执行类中定义的Java代码，此阶段是执行`<clinit>`方法的过程
+		- 该阶段才开始执行类中定义的Java代码，此阶段是执行`<clinit>`方法（class initialization）的过程
 		- `<clinit>`方法是由编译器按语句在源文件中出现的顺序，依次自动收集类中所有静态变量的赋值动作和静态代码块中的语句，并进行合并
 		- JVM会保证一个类的`<clinit>`方法在多线程环境中被正确地加锁、同步。如果多个线程同时去初始化一个类，则只有一个线程执行`<clinit>`方法，其他线程都需要等待，直到活动线程执行完该方法
 
@@ -10124,7 +10126,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		    public static void main(String[] args) throws Exception {
 		        Class<?> cls = Class.forName("Cat");
 		        Object o = cls.newInstance();
-		        //1,访问私有方法
+		        //1. 访问私有方法
 		        Method method1 = cls.getDeclaredMethod("think", String.class);//方法名 + 形参列表
 		        method1.setAccessible(true);//暴破
 		        //传入对象 + 实参，返回Object对象
@@ -10414,7 +10416,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 2. 数值型（整型）
 
-	- <img src="C:\Users\Morgan\AppData\Roaming\Typora\typora-user-images\image-20220401091602163.png" alt="image-20220401091602163" style="zoom:33%;" />
+	- <img src="C:\Users\Morgan\AppData\Roaming\Typora\typora-user-images\image-20220401091602163.png" alt="image-20220401091602163" style="zoom: 50%;" />
 
 	- 在满足需求的情况下，尽量选择占用空间小的类型
 
@@ -10653,7 +10655,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		| `between A and B`               | 是否在区间`[A, B]`中                                |
 		| `in(set)`                       | 是否在集合中                                        |
 		| `like ''`、`not like ''`        | 模糊查询。规则为`%`表示0到多个字符，`_`表示单个字符 |
-		| `is null`、`is not null`        | 是否为空。判断是否为空不能有`=`或`!=`               |
+		| `is null`、`is not null`        | 是否为空。判断是否为空不能用`=`或`!=`               |
 		| `and`、`or`、`not`              | 逻辑运算符                                          |
 
 	- 例子：
@@ -10668,7 +10670,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		SELECT * FROM `user` WHERE kpi BETWEEN 67 AND 68;
 		SELECT * FROM `user` WHERE id IN (200,400);
 		#%表示通配符，可以匹配0到多个字符
-		SELECT * FROM `user` WHERE `name` LIKE 'e%' AND kpi >60;
+		SELECT * FROM `user` WHERE `name` LIKE 'e%' AND kpi >60; #名字以e开头
 		SELECT * FROM `user` WHERE `name` LIKE '_a%'; #名字的第二个字母为a
 		```
 
@@ -10884,7 +10886,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 同一张表的连接查询——一张表当作两张表来用
 
-	- 由于`select`语句中，表名需要唯一，因此给表名取别名以使用自连接：`表名 表别名`（不需要加`as`）
+	- 由于`select`语句中，表名需要唯一，因此给表名取别名以使用自连接：`表名 表别名`
 
 	- ```mysql
 		# 输出员工和他的上级的名字
@@ -11041,10 +11043,6 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		SELECT * FROM person WHERE kpi >=70;
 		```
 
-	- 
-
-
-
 
 
 
@@ -11072,7 +11070,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 2. 合计函数：`sum`
 
-	- 返回满足条件的行的某些字段的和，一般使用在数值列
+	- 返回满足条件的行的某些字段的和，一般**使用在数值列**
 
 	- ```mysql
 		select sum(列名) {,sum(列名)...} from 表名 [where 条件]
@@ -11100,7 +11098,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- 返回满足条件的一列的平均值
 
 	- ```mysql
-		select avg(列名) {,avg(列名)...} from 表名 [where 条件]
+		select avg(列名|表达式) {,avg(列名)...} from 表名 [where 条件]
 		```
 
 	- ```mysql
@@ -11431,7 +11429,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 某字段被定义为外键后，要求该列数据必须在主表的主键列存在，或者数据的值为`null`
 
-	- 语法：在表的最后定义：`foreign key (本表字段) references 主表名(主表字段)`。
+	- 语法：在表的最后定义：`foreign key (本表字段) references 主表名(主表字段)`
 
 	- reference意为引用，可以按照c++中的引用来理解：从表中的外键字段必须引用主表字段中的一个值。`int& a = b`，b需要是一个存在的变量；而`int& a = 1`是非法的，正如从表外键列不能是主表列中不存在的值。
 	
@@ -11447,7 +11445,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		INSERT INTO stu VALUE(2, 'rose',3);#error，stu.id中不存在3
 		```
 		
-	- 外键指向的表的字段，必须有主键或者唯一约束
+	- 外键指向的表的字段，必须有主键或者唯一约束——主表如果有多个相同值，应该引用谁呢？
 	
 	- 只有引擎为`innodb`的表才支持外键
 	
@@ -11658,17 +11656,17 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 
-4. 事务一些原理
+4. 事务原理
 	- :one:回退事务
 		- :eight_pointed_black_star: 保存点：保存点是事务中的点，用于取消该点之后的dml语句
 		- 当执行回退事务时，通过指定保存点回退到该点。回退后，原本该点之后的语句将全部失效，包括设置的保存点——即不可能跳向未来的保存点，这一点和Git不同
 	- :two:提交事务
-		- 使用`commit`语句来提交事务。事务提交后，会确认事务的变化、结束事务、删除保存点（意味着不能回退）、释放锁，使数据正式生效。同时， 其他回话（其他用户的连接）可以看到事务变化后的新数据
+		- 使用`commit`语句来提交事务。事务提交后，会确认事务的变化、结束事务、删除保存点（意味着不能再回退）、释放锁，使数据正式生效。同时， 其他会话（其他用户的连接）可以看到事务变化后的新数据
 
 
 
 5. 事务细节
-	- 如果不开始事务，默认情况下，dml操作时自动提交的，回滚无效
+	- 如果不开始事务，**默认情况下，dml操作时自动提交**的，回滚无效
 	- 开启事务后，如果没有保存点，可以使用`rollback`回退到事务开始的状态
 	- 保存点可以创建任意多个
 	- `InnoDB`引擎支持事务机制，而`MyISAM`不支持
@@ -11706,7 +11704,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 设置系统隔离级别：`set global transaction isolation level 隔离级别;`
 
-	- MySQL默认的系统隔离级别为repeatable read，该级别能满足大部分项目需求，因此没必要改
+	- MySQL默认的系统隔离级别为`repeatable read`，该级别能满足大部分项目需求，因此没必要改
 
 	- 修改系统默认隔离级别：在`my.ini`文件最后加上：
 
@@ -11744,7 +11742,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 2. 引擎特点
-	- <img src="C:\Users\Morgan\AppData\Roaming\Typora\typora-user-images\image-20220405162837324.png" alt="image-20220405162837324" style="zoom: 50%;" />
+	- <img src="C:\Users\Morgan\AppData\Roaming\Typora\typora-user-images\image-20220405162837324.png" alt="image-20220405162837324" style="zoom: 67%;" />
 	- MyISAM不支持事务和外键，但访问速度快，对事务完整性没有要求
 	- InnoDB提供了具有提交、回滚和崩溃恢复能力的事务安全。但相比MyISAM，InnoDB 写的效率较差，且会占用更多磁盘空间
 	- MEMORY使用内存中的数据来创建表。每个MEMORY表只实际对应一个磁盘文件。MEMORY表访问非常快，因为数据放在内存中（不是文件IO），且默认使用HASH索引。但是，一旦MySQL服务关闭，表中的数据就会丢失，只有表的结构作为文件存在
@@ -11771,7 +11769,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 2. 基本概念
 	- 视图是一个虚拟表，其内容由查询定义。与表一样，视图包含列，但其数据来自对应的真实表（基表）
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204061048931.png" alt="image-20220406104809117" style="zoom:33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204061048931.png" alt="image-20220406104809117" style="zoom: 50%;" />
 	- 视图与基表之间存在映射关系。对视图的操作实际是对基表的操作。
 	- 视图根据（多个）基表创建，但本身不包含数据——可以理解为一种对基表数据的引用
 
@@ -11792,7 +11790,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 	- ```mysql
 		SELECT * FROM person;
 		#创建视图
-		CREATE VIEW v1 AS (SELECT id, `name`,jobID FROM person);
+		CREATE VIEW v1 AS (SELECT id, `name`, jobID FROM person);
 		
 		SELECT * FROM v1;
 		#创建视图的语句
@@ -11871,7 +11869,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 3. 权限管理
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204061406821.png" alt="image-20220406140642597" style="zoom:50%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204061406821.png" alt="image-20220406140642597" style="zoom: 67%;" />
 	
 	- :one:给用户授权：
 		- 语法：`grant 权限列表 on 库名.对象名 to '用户名'@'登录位置' [identified by '密码'] ;`
@@ -11925,7 +11923,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 
 2. JDBC原理
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204071254628.png" alt="image-20220407125440984" style="zoom:33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204071254628.png" alt="image-20220407125440984" style="zoom: 50%;" />
 	- java制定程序连接数据库的规范，即要求各个数据库厂商实现java提供的接口
 	- 各个数据库厂商实现接口，将代码封装到相应驱动中（即`.jar`文件），提供给java
 	- 程序员只要调用接口，就能对各种数据库进行操作
@@ -11936,9 +11934,12 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 3. JDBC好处
 	- 如果java直接访问数据库，则不仅需要为不同数据库写不同代码，而且每当数据库更新，都需要修改代码——不合理
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204071258119.png" alt="image-20220407125825871" style="zoom:33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204071258119.png" alt="image-20220407125825871" style="zoom: 50%;" />
 	- 使用JDBC，数据库的更新只影响JDBC驱动更新，不会影响原有的代码和程序
-	- 
+
+
+
+
 
 
 
@@ -12018,7 +12019,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 ## JDBC API
 
 1. 基本介绍
-	- JDBC API是一些列接口，它统一和规范了程序与数据库的连接、执行MySQL语句、得到结果等操作，相关类和接口在`java.sql`和`javax.sql`中
+	- JDBC API是一系列接口，它统一和规范了程序与数据库的连接、执行MySQL语句、得到结果等操作，相关类和接口在`java.sql`和`javax.sql`中
 
 
 
@@ -12125,7 +12126,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        String url = "jdbc:mysql://localhost:3306/db02";
 		        Connection connect = DriverManager.getConnection(url, "root", "123");
 		
-		        //3. 要执行的SQL查询语句
+		        //要执行的SQL查询语句
 		        String query = "select * from person";//之前定义的一张雇员表
 		        Statement statement = connect.createStatement();
 		
@@ -12140,7 +12141,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		            System.out.println(id + "\t" + name + "\t" + salary);
 		
 		        }
-		        //4. 释放资源
+		        //释放资源
 		        resultSet.close();
 		        statement.close();
 		        connect.close();
@@ -12148,7 +12149,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		}
 		```
 
-	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204080614167.png" alt="image-20220408061405935" style="zoom:33%;" />
+	- <img src="https://cdn.jsdelivr.net/gh/el-nino2020/ImageBed/202204080614167.png" alt="image-20220408061405935" style="zoom: 50%;" />
 
 	- 所有查询结果在`ResultSet`的`rowData`字段中，数据最终以`byte[]`的形式存在
 
@@ -12182,7 +12183,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 			#输入密码为   or '1' = '1
 			#如果只是单纯的文本替换，则查询语句如下
 			SELECT * FROM admin 
-				WHERE user_name = '1' OR' AND pwd = 'OR '1' = '1';
+				WHERE user_name = '1' OR' AND pwd = ' OR '1' = '1';
 			#条件永远为真，安全校验没有意义
 			```
 
@@ -12401,7 +12402,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 ## 事务
 
 1. 基本介绍
-	- JDBC程序中，当一个`Connection`对象创建时，默认情况是自动提交事务的。每执行一个SQL语句，如果执行成功，会自动提交，不能回滚
+	- JDBC程序中，当一个`Connection`对象创建时，**默认情况是自动提交事务的**。每执行一个SQL语句，如果执行成功，会自动提交，不能回滚
 	- JDBC为了让多个SQL语句作为一个整体，使用事务
 	- 调用`Connection`的`setAutoCommit(false)`方法以取消自动提交
 	- 当所有SQL语句执行成功后，调用`commit()`提交事务；如果某个操作失败或出现异常，调用`rollback()`，回滚事务
@@ -12445,6 +12446,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		
 		            System.out.println("转账成功");
 		            connection.commit();//提交事务
+		            
 		        } catch (Exception e) {
 		            System.out.println("出现异常，转账失败");
 		
@@ -12509,7 +12511,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		            for (int i = 0; i < 5000; i++) {
 		                preparedStatement.setString(1, "issac" + i);
 		                preparedStatement.setString(2, "abc" + i);
-		                preparedStatement.addBatch();//加入到批处理包中
+		                preparedStatement.addBatch();//将当前语句加入到批处理包中
 		
 		                if ((i + 1) % 1000 == 0) {//每有1000条SQL语句处理一次
 		                    preparedStatement.executeBatch();
@@ -12551,7 +12553,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 
 	- 抛出如下异常：`Exception in thread "main" java.lang.RuntimeException: java.sql.SQLNonTransientConnectionException: Data source rejected establishment of connection,  message from server: "Too many connections"`
 
-	- 如果连接就关闭了呢？
+	- 如果连接后就关闭了呢？
 
 	- ```java
 		import java.sql.Connection;
@@ -12696,7 +12698,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		
 		public class Test {
 		    public static void main(String[] args) throws Exception {
-		        //参数为xml文件中写的数据源的名称
+		        //构造器参数为xml文件中写的数据源的名称
 		        ComboPooledDataSource comboPooledDataSource = new ComboPooledDataSource("learnJDBC");
 		        Connection connection = comboPooledDataSource.getConnection();
 		        System.out.println(connection);
@@ -12893,7 +12895,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		            //使用person.getDepartID()比使用resultSet.getString(2)方便得多，
 		            //代码意图更明显
 		        }
-		        //resultSet和statement对象由query()方法负责关闭
+		        //resultSet和statement对象由query()方法负责关闭，这里只要关闭JDBCUtils中创建的Connection对象
 		        JDBCUtils.close(null, null, connection);
 		    }
 		}
@@ -12998,7 +13000,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		        Connection connection = JDBCUtils.getConnection();
 		        QueryRunner queryRunner = new QueryRunner();
 		
-		        //update()方法中可以使用DML语句，不只是SQL中的update
+		        //update()方法中可以使用任何DML语句，不只是SQL中的update
 		        String sql = "INSERT INTO person VALUES (?,?,?,?,?,?,?)";
 		        //返回受影响的行数
 		        int rows = queryRunner.update(connection, sql,
@@ -13023,7 +13025,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/house_rent
 		- javabean类有一个`public`的无参构造器，用于在反射时生成对象
 		- javabean类的属性需要有set方法，用于在反射时赋值
 	- javabean类属性的名称需要与查询到的结果集的列名相同，否则该属性值为`null`。例如：`select name from employee;`，而javabean类中没有名为`name`的字段，javabean对象中`name`的值永远为`null`
-	- 在多表查询时，如果使用一个javabean类来接收结果集的所有列，需要在该类中定义这些属性——它们与各个表中需要的字段名相同。例如`employee`表中有`id`、`name`字段，`depart`表中也有`departName`字段，查询语句为`select id, name, departName from employee, depart where 条件 ;`，那么javabean类中应定义这些字段——它们的名字为`id`、`name`和`departName`
+	- 在多表查询时，如果使用一个javabean类来接收结果集的所有列，需要在该类中定义这些属性——它们与各个表中需要的字段名相同。例如`employee`表中有`id`、`name`字段，`depart`表中有`departName`字段，查询语句为`select id, name, departName from employee, depart where 条件 ;`，那么javabean类中应定义这些字段——它们的名字为`id`、`name`和`departName`
 	- 如果查询的两张表的某个字段名相同，如`employee`表中有`id`字段，`job`表中也有`id`字段，这两个字段都需要被存入一个javabean对象。此时，使用查询语句`select employee.id as id1, job.id as id2 from employee, job where 条件;`javabean类中定义名为`id1`和`id2`的字段即可
 
 
@@ -13381,7 +13383,7 @@ https://github.com/el-nino2020/java-hanshunping/tree/main/mhl
 
 2. `Pattern`类常用方法
 	- `Matcher matcher(String content)`：返回一个`Matcher`对象
-	- `boolean matches(String regex, String content)`：查看正则表达式是否整体匹配`content`，相当于`^表达式$`
+	- `boolean matches(String regex, String content)`：查看正则表达式是否**整体**匹配`content`，相当于`^表达式$`
 
 
 
